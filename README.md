@@ -1,0 +1,1 @@
+Boot.dev's Static site generator project.
