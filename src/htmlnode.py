@@ -26,12 +26,14 @@ class HTMLNode():
 
 class LeafNode(HTMLNode):
     def __init__ (self,tag = None, value = None, props = None , children = None) :
+        if children:
+            raise ValueError("LeafNode cannot have children")
         super().__init__(tag = tag, value = value, children=  children , props = props)
        
     def to_html(self):
         if self.children != [] : 
             raise Exception("Leaf node can't have children")
-        if self.value == None :
+        if self.value is None :
             raise ValueError
 
         html_opening_tag = f"<{self.tag}"
@@ -42,5 +44,5 @@ class LeafNode(HTMLNode):
         html_closing_tag = f"</{self.tag}>"
 
         # Construct and return the full HTML string
-        print( f"{html_opening_tag}{self.value}{html_closing_tag}")
+        return( f"{html_opening_tag}{self.value}{html_closing_tag}")
         
