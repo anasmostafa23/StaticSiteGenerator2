@@ -6,6 +6,21 @@ def main () :
 
     leaf1.to_html()
     leaf2.to_html()
+    node = ParentNode(
+            "h2",
+            [
+                LeafNode("b", "Bold text"),
+                LeafNode(None, "Normal text"),
+                LeafNode("i", "italic text"),
+                LeafNode(None, "Normal text"),
+            ],
+        )
+    
+
+    print(leaf1.to_html()+"\n")
+    print(node.to_html())
+
+
 
 
     

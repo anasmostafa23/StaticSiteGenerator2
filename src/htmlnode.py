@@ -34,14 +34,17 @@ class LeafNode(HTMLNode):
        
         if self.value is None :
             raise ValueError
+        
+        if self.tag != None :
+            
+            html_opening_tag = f"<{self.tag}"
+            if self.props:
+                html_opening_tag += f" {self.props_to_html()}"
+            html_opening_tag += ">"
 
-        html_opening_tag = f"<{self.tag}"
-        if self.props:
-            html_opening_tag += f" {self.props_to_html()}"
-        html_opening_tag += ">"
-
-        html_closing_tag = f"</{self.tag}>"
-
+            html_closing_tag = f"</{self.tag}>"
+        elif self.tag == None :
+            html_closing_tag = html_opening_tag = ""
         # Construct and return the full HTML string
         return( f"{html_opening_tag}{self.value}{html_closing_tag}")
 
