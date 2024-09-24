@@ -1,5 +1,6 @@
 from textnode import *
 from htmlnode import *
+from delimiter import *
 def main () :
     leaf1 = LeafNode("p", "This is a paragraph of text.")
     leaf2 = LeafNode("a", "Click me!", {"href": "https://www.google.com"})
@@ -17,8 +18,15 @@ def main () :
         )
     
 
-    print(leaf1.to_html()+"\n")
-    print(node.to_html())
+    
+    x = "This is `outer `inner` content` and another` sd ` `"
+    
+
+    z= find_matching_delimiters(x , '`')
+
+    print (z)
+    
+
 
 
 
