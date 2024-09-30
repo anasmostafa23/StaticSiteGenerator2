@@ -2,6 +2,7 @@ from textnode import *
 from htmlnode import *
 from delimiter import *
 from link_extractor import *
+from text_to_textnodes import *
 import re
 def main () :
     leaf1 = LeafNode("p", "This is a paragraph of text.")
@@ -20,6 +21,8 @@ def main () :
         )
     
     
+text = "This is **text** with an *italic* word and a `code block` and an ![obi wan image](https://i.imgur.com/fJRm4Vk.jpeg) and a [link](https://boot.dev)" 
+
 
 
     
