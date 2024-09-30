@@ -2,6 +2,7 @@ from textnode import *
 from htmlnode import *
 from delimiter import *
 from link_extractor import *
+import re
 def main () :
     leaf1 = LeafNode("p", "This is a paragraph of text.")
     leaf2 = LeafNode("a", "Click me!", {"href": "https://www.google.com"})
@@ -18,11 +19,14 @@ def main () :
             ],
         )
     
+    
+
 
     
-    text = "This is text with a link [to boot dev](https://www.boot.dev) and [to youtube](https://www.youtube.com/@bootdotdev)"
+        
     
-    print(extract_markdown_links(text))
+
+   
 
 
 
