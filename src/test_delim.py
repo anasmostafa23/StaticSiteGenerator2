@@ -89,19 +89,19 @@ class TestInlineMarkdown(unittest.TestCase):
             new_nodes,
         )
 
-        def test_split_image(self):
-            node = TextNode(
-                "This is text with an ![image](https://i.imgur.com/zjjcJKZ.png)",
-                text_type_text,
-            )
-            new_nodes = split_nodes_image([node])
-            self.assertListEqual(
-                [
-                    TextNode("This is text with an ", text_type_text),
-                    TextNode("image", text_type_image, "https://i.imgur.com/zjjcJKZ.png"),
-                ],
-                new_nodes,
-            )
+    def test_split_image(self):
+        node = TextNode(
+            "This is text with an ![image](https://i.imgur.com/zjjcJKZ.png)",
+            text_type_text,
+        )
+        new_nodes = split_nodes_image([node])
+        self.assertListEqual(
+            [
+                TextNode("This is text with an ", text_type_text),
+                TextNode("image", text_type_image, "https://i.imgur.com/zjjcJKZ.png"),
+            ],
+            new_nodes,
+        )
 
     def test_split_image_single(self):
         node = TextNode(
