@@ -2,7 +2,6 @@ from textnode import *
 from htmlnode import *
 from delimiter import *
 from link_extractor import *
-from text_to_textnodes import *
 import re
 def main () :
     leaf1 = LeafNode("p", "This is a paragraph of text.")
