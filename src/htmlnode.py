@@ -34,8 +34,11 @@ class LeafNode(HTMLNode):
        
         if self.value is None :
             raise ValueError
+        if self.value == "" :
+            raise ValueError
+
         
-        if self.tag != None :
+        if self.tag != None and self.tag != "":
             
             html_opening_tag = f"<{self.tag}"
             if self.props:
