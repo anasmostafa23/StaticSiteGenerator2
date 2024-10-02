@@ -1,9 +1,8 @@
-from textnode import TextNode
+from copy_function import *
 
 
 def main():
-    node = TextNode("This is a text node", "bold", "https://www.boot.dev")
-    print(node)
-
+    copy_directory("/home/mx/StaticSiteGenerator2/Static", "/home/mx/StaticSiteGenerator2/public")
+    
 
 main()
