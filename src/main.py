@@ -5,8 +5,8 @@ from generate_page import *
 
 
 def main():
-    #copy_directory("/home/mx/StaticSiteGenerator2/Static", "/home/mx/StaticSiteGenerator2/public")
-    generate_pages_recursive("/home/mx/StaticSiteGenerator2/content","/home/mx/StaticSiteGenerator2/template.html","/home/mx/StaticSiteGenerator2/public/")
+    #generate_pages_recursive("source_directory", "html_template_directory","destination_directory")
+    generate_pages_recursive("/home/user/StaticSiteGenerator2/content","/home/user/StaticSiteGenerator2/template.html","/home/mx/StaticSiteGenerator2/public/")
     
 
 main()
